@@ -49,3 +49,52 @@ input:focus, select:focus, textarea:focus {
     @apply bg-background text-foreground; }
   html {
     @apply font-sans; } }
+    
+/* Custom font definitions */
+@font-face {
+  font-family: 'Mortane';
+  src: url('/fonts/Mortane.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Giuconda';
+  src: url('/fonts/Giuconda.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Theme variables for shadcn */
+@theme {
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-mortane: 'Mortane', var(--font-geist-sans), system-ui, sans-serif;
+  --font-giuconda: 'Giuconda', var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Your B&W design system colors */
+@layer base {
+  :root {
+    --background: 45 20% 98%;     /* #F8F7F4 */
+    --foreground: 0 0% 4%;        /* #0A0A0A */
+    --card: 0 0% 100%;            /* #FFFFFF */
+    --card-foreground: 0 0% 4%;
+    --border: 40 10% 92%;         /* #ECEAE5 */
+    --input: 40 10% 92%;
+    --ring: 0 0% 4%;
+    --muted: 40 10% 95%;          /* #F2F1ED */
+    --muted-foreground: 0 0% 36%; /* #5C5C5C */
+  }
+}
+
+/* Utility classes for custom fonts */
+.font-mortane {
+  font-family: 'Mortane', var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.font-giuconda {
+  font-family: 'Giuconda', var(--font-geist-sans), system-ui, sans-serif;
+}
