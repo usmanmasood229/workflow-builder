@@ -1,20 +1,12 @@
-// tailwind.config.ts - minimal for v4
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        mortane: ['Mortane', 'sans-serif'],
-        giuconda: ['Giuconda', 'sans-serif'],
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
-export default config

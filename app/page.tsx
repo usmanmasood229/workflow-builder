@@ -1,9 +1,10 @@
 // app/page.tsx
+'use client'
+
 import dynamic from 'next/dynamic'
 
-// tldraw uses browser APIs — must be client-only, no SSR
-const WorkflowApp = dynamic(() => import('@/components/WorkflowApp'), { ssr: false })
+const SlideCanvas = dynamic(() => import('@/components/SlideCanvas'), { ssr: false })
 
 export default function Home() {
-  return <WorkflowApp />
+  return <SlideCanvas />
 }

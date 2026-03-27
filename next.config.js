@@ -1,7 +1,5 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['tldraw'],
+  reactStrictMode: false,
 }
-
 module.exports = nextConfig
